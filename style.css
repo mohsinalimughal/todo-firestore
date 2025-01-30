@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: 1px solid black;
+    height: 100vh;
+    flex-direction: column;
+}
