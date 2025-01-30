@@ -11,13 +11,16 @@ const desc = document.querySelector("#desc")
 const allTodos = []
 
 form.addEventListener("submit",async (event)=>{
+
+
+  allTodos.length = 0
     event.preventDefault()
     console.log(title.value)
     console.log(desc.value)
     try {
         const docRef = await addDoc(collection(db, "Todos"), {
-          first: title.value,
-          last: desc.value,
+          title: title.value,
+          desc: desc.value,
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {
@@ -31,14 +34,27 @@ form.addEventListener("submit",async (event)=>{
     });
 
 console.log(allTodos);
+renderTodo()
 })
 
-const todoDiv = document.querySelector("todoDiv")
+const todoDiv = document.querySelector("#todoDiv")
 const renderTodo = ()=>{
-       
-
+  todoDiv.innerHTML = ''
+    allTodos.map((item)=>{
+      console.log(item);
+      todoDiv.innerHTML += `
+          <div id="todoDiv">
+       <p>${item.title}</p>
+       <p>${item.desc}</p>
+    </div>
+      
+      `
+    })
+      title.value = ''
+desc.value = ''
 
 }
+
 
 
 
