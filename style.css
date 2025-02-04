@@ -1,21 +1,94 @@
-*{
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-#form{
+
+body {
+    background-color: #f4f4f4;
+}
+
+#form {
     display: flex;
-    align-items: center;
-    justify-content: start;
     flex-direction: column;
+    align-items: center;
+    background: #fff;
     padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
-#todoDiv{
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    background: #28a745;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#todoDiv {
     display: flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
     flex-direction: column;
-    margin: 10px;
+    align-items: center;
+    margin: 20px auto;
+    width: 60%;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    width: 100%;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
 }
